@@ -1,5 +1,7 @@
-  <app-product>[product]='firstProduct'</app-product>
+<h1>Lista de Productos</h1>
 
-
-
-
+<div class="row p-3" *ngFor="let product of arrayProducts">
+  <div class="col-6">
+    <app-product [prod]="product"></app-product>
+  </div>
+</div>

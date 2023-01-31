@@ -1,11 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/models/Product';
 
-interface Product
-{
-  name: String;
-  desc : String;
-  price : String;
-}
 
 @Component({
   selector: 'app-product',
@@ -16,5 +11,5 @@ interface Product
 
 export class ProductComponent
 {
-  @Input() product : Product ;
+  @Input() prod : Product;
 }

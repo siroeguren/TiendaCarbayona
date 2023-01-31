@@ -1,0 +1,27 @@
+
+{
+  "products":
+  [
+    {
+      "id": 1,
+      "name": "Mochila R.O",
+      "desc": "Description of product 1",
+      "price": 10,
+      "image": "https://realoviedo.shop/wp-content/uploads/2020/08/HAG3688.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Camiseta 22/23 R.O",
+      "desc": "Description of product 2",
+      "price": 20,
+      "image": "https://cdn.shopify.com/s/files/1/0605/7515/4372/products/image_dc4e57e1-23b1-4f28-9911-47fdb5a02364.jpg?v=1660757862"
+    },
+    {
+      "id": 3,
+      "name": "Chandal 22/23 R.O",
+      "desc": "Description of product 3",
+      "price": 30,
+      "image": "https://realoviedo.shop/wp-content/uploads/2022/02/HAG0292.jpg"
+    }
+  ]
+}
