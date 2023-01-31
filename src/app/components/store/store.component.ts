@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 import { ProductsService } from 'src/app/services/products.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-store',
@@ -10,7 +11,8 @@ import { ProductsService } from 'src/app/services/products.service';
 export class StoreComponent
 {
   arrayProducts = [];
-  constructor(private productsService : ProductsService)
+  constructor(private productsService : ProductsService ,
+              private sharedServices : SharedService)
   {
 
   }
@@ -18,6 +20,7 @@ export class StoreComponent
   ngOnInit()
   {
     console.log(this.productsService.getProducts());
+    this.sharedServices.runSpinner(true);
     this.productsService.getProducts().subscribe
     (
       {
@@ -30,6 +33,7 @@ export class StoreComponent
         complete : () =>
         {
           console.log('complete');
+          this.sharedServices.runSpinner(false);
         },
         error : (error) =>
         {
@@ -38,6 +42,5 @@ export class StoreComponent
 
       }
     );
-
   }
 }
